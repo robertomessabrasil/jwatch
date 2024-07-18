@@ -1,4 +1,4 @@
-package com.jwatch.observer.listener;
+package io.github.robertomessabrasil.jwatch.observer.listener;
 
 public abstract class Event {
     private boolean interrupt;

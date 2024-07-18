@@ -1,4 +1,4 @@
-package com.jwatch.observer.listener;
+package io.github.robertomessabrasil.jwatch.observer.listener;
 
 import java.util.ArrayList;
 import java.util.List;

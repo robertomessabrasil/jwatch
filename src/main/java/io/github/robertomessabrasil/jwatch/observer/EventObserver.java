@@ -1,8 +1,8 @@
-package com.jwatch.observer;
+package io.github.robertomessabrasil.jwatch.observer;
 
-import com.jwatch.exception.InterruptException;
-import com.jwatch.observer.listener.Event;
-import com.jwatch.observer.listener.EventListener;
+import io.github.robertomessabrasil.jwatch.exception.InterruptException;
+import io.github.robertomessabrasil.jwatch.observer.listener.Event;
+import io.github.robertomessabrasil.jwatch.observer.listener.EventListener;
 
 import java.util.ArrayList;
 import java.util.List;
