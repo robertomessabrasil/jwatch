@@ -25,7 +25,7 @@ Add this dependency in your pom.xml
   JWatch uses the oberver pattern to handle various types of events in java code.
 
   The following items are necessary to use JWatch in you java code:
-  1. Create events with appropriate data
+  1. Create events with appropriate attributes and methods
   2. Create listeners to consume those events
   3. Subscribe the listeners in your observer
   4. Publish the events in your code
