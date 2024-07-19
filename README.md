@@ -17,7 +17,7 @@ Add this dependency in your pom.xml
   <dependency>
       <groupId>io.github.robertomessabrasil</groupId>
       <artifactId>jwatch-lib</artifactId>
-      <version>1.0</version>
+      <version>1.1</version>
   </dependency>
 ```
   ## How to use
