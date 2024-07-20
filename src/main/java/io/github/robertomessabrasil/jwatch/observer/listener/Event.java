@@ -12,5 +12,5 @@ public abstract class Event {
         return this;
     }
 
-    abstract public String toString();
+    public abstract String toString();
 }

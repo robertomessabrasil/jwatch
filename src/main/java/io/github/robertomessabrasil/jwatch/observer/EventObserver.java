@@ -20,20 +20,29 @@ public class EventObserver {
 
         for (EventListener eventListener : this.listeners) {
             for (Class<? extends Event> eventOfInterest : eventListener.getEventsOfInterest()) {
-                if (event.getClass().equals(eventOfInterest)) {
-                    if (eventListener.handleEvent(event)) {
-                        if (this.interruptEvent == null) {
-                            this.interruptEvent = event;
-                        }
-                    }
+                boolean isEventOfInterest = event.getClass().equals(eventOfInterest);
+                if (isEventOfInterest) {
+                    this.mustInterrupt(eventListener, event);
                 }
             }
         }
 
-        if (this.interruptEvent != null) {
+        throwInterruptException();
+
+    }
+
+    private void throwInterruptException() throws InterruptException {
+        boolean isInterruptEventNull = this.interruptEvent != null;
+        if (isInterruptEventNull) {
             throw new InterruptException();
         }
+    }
 
+    private void mustInterrupt(EventListener eventListener, Event event) {
+        boolean mustInterrupt = eventListener.handleEvent(event) && (this.interruptEvent == null);
+        if (mustInterrupt) {
+            this.interruptEvent = event;
+        }
     }
 
     public List<EventListener> getListeners() {

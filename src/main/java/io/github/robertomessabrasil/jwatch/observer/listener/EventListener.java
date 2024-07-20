@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 abstract public class EventListener {
-    private final List<Class<? extends Event>> eventsOfInterest = new ArrayList<>();
+    final private List<Class<? extends Event>> eventsOfInterest = new ArrayList<>();
 
     public abstract boolean handleEvent(Event event);
 
